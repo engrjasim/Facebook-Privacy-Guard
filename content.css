@@ -1,0 +1,18 @@
+:root {
+    --fpg-blur-strength: 12px;
+}
+
+.fpg-blur-profile,
+.fpg-blur-username,
+.fpg-blur-image,
+.fpg-blur-video {
+    filter: blur(var(--fpg-blur-strength)) !important;
+    transition: filter 0.2s ease !important;
+}
+
+.fpg-blur-profile:hover,
+.fpg-blur-username:hover,
+.fpg-blur-image:hover,
+.fpg-blur-video:hover {
+    filter: blur(0) !important;
+}

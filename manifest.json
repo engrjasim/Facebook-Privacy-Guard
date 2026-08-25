@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Privacy Guard",
+  "version": "1.0.1",
+  "description": "Blur Facebook profile pictures, usernames, images and videos for privacy.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.facebook.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Facebook Privacy Guard"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.facebook.com/*"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "facebook-privacy-guard@local.extension",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}

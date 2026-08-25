@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Privacy Guard</title>
+
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Facebook Privacy Guard</h1>
+
+            <p class="subtitle">
+                Protect your privacy on Facebook
+            </p>
+        </div>
+
+
+        <!-- Privacy Settings -->
+        <div class="settings">
+
+            <!-- Profile Picture -->
+            <div class="setting">
+                <div class="setting-info">
+
+                    <span class="icon">👤</span>
+
+                    <div>
+                        <strong>Profile Picture</strong>
+                        <small>Blur profile pictures</small>
+                    </div>
+
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="profileBlur"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Username -->
+            <div class="setting">
+                <div class="setting-info">
+
+                    <span class="icon">📝</span>
+
+                    <div>
+                        <strong>Username</strong>
+                        <small>Blur usernames</small>
+                    </div>
+
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="usernameBlur"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Images -->
+            <div class="setting">
+                <div class="setting-info">
+
+                    <span class="icon">🖼️</span>
+
+                    <div>
+                        <strong>Images</strong>
+                        <small>Blur Facebook images</small>
+                    </div>
+
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="imageBlur"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Videos -->
+            <div class="setting">
+                <div class="setting-info">
+
+                    <span class="icon">🎥</span>
+
+                    <div>
+                        <strong>Videos</strong>
+                        <small>Blur Facebook videos</small>
+                    </div>
+
+                </div>
+
+                <label class="switch">
+                    <input
+                        type="checkbox"
+                        id="videoBlur"
+                        checked
+                    >
+
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+
+        <!-- Blur Strength -->
+        <div class="blur-strength">
+
+            <div class="strength-header">
+
+                <div>
+                    <strong>🎚️ Blur Strength</strong>
+
+                    <small>
+                        Adjust the privacy level
+                    </small>
+                </div>
+
+                <span id="blurValue">15px</span>
+
+            </div>
+
+
+            <input
+                type="range"
+                id="blurStrength"
+                min="5"
+                max="30"
+                value="15"
+                step="1"
+            >
+
+            <div class="range-labels">
+                <span>Light</span>
+                <span>Strong</span>
+            </div>
+
+        </div>
+
+
+        <!-- Privacy Status -->
+        <div class="privacy-status">
+
+            <span class="status-icon">🛡️</span>
+
+            <div>
+                <strong>Privacy Protection</strong>
+                <small>Active on Facebook</small>
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div class="footer">
+
+            <span>Facebook Privacy Guard</span>
+
+            <span>v1.0.0</span>
+
+        </div>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
